@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-def add(a, b):
-    """Addition function
 
-    Args:
-        a: integer 1
-        b: integer 2
+if __name__ == "__main__":
+    """Print the sum of 1 & 2."""
+    from add_0 import add
 
-    Returns:
-        The return value. a + b
-    """
-    return (a + b)
-
+    a = 1
+    b = 2
+    print("{} + {} = {}".format(a, b, add(a, b)))
