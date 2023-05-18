@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def to_subtract(list_number):
     to_sub = 0
     max_list = max(list_number)
