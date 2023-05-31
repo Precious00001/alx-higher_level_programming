@@ -56,7 +56,7 @@ class Square:
 
     def my_print(self):
         """
-        prints a square
+        prints  a square of a specified size using the character sequence "##".
 
         Returns:
             None
