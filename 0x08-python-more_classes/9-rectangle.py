@@ -13,7 +13,7 @@ class Rectangle:
             number_of_instances (int) : Public Class attribute
             print_symbol (any): The symbol employed to represent a string.
         """
-    
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -61,7 +61,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -83,7 +83,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return(self.__width * 2) + (self.__height * 2)
-    
+
     def __str__(self):
         """
             print the rectangle
@@ -100,11 +100,11 @@ class Rectangle:
             if w != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
-    
+
     def __repr__(self):
-        """It provides a string representation of the rectangle for replicating purposes."""
+        """It provides a str rep of the rectangle for replicating purposes."""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         """Display a message each time a Rectangle is deleted."""
         type(self).number_of_instances -= 1
@@ -130,23 +130,12 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
-    
+
     @classmethod
     def square(cls, size=0):
-        """
-        Make a square from a rectangle
-        Args:
-            size (int): the size of the square
-        Returns:
-            (Rectangle): instance of rectangle
-        """
-        return cls(size, size)
-    
-    @classmethod
-    def square(cls, size=0):
-        """ Return a new Rectangle object with both the width and height set to the given size.
+        """ Return a square.
 
         Args:
-            size (int): The dimensions of the new Rectangle, referring to its width and height.
+            size (int): The dimensions of the new Rectangle.
         """
         return (cls(size, size))
