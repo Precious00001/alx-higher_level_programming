@@ -131,4 +131,3 @@ class Base:
                 return [cls.create(**item) for item in e]
         except FileNotFoundError:
             return []
-

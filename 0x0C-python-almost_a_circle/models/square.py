@@ -73,5 +73,3 @@ class Square(Rectangle):
             Get/set the size of the Square.
         """
         return self.width
-
-
