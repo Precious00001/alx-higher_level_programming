@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Start link class to table in database 
+"""Start link class to table in database
 """
 from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
