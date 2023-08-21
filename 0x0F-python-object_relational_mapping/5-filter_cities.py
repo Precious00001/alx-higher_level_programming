@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
- takes in the name of a state as an argument
- and lists all cities of that state, using the
-database hbtn_0e_4_usa
-"""
+"""  lists all states from the database hbtn_0e_0_usa """
 import MySQLdb
 import sys
 
@@ -20,6 +16,9 @@ if __name__ == "__main__":
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name=%s""", (sys.argv[4],))
     rows = cur.fetchall()
-    print(*tmp, sep=", ")
+    re = ""
+    for r in rows:
+        re += r[0] + ", "
+    print(re[0:-2:])
     cur.close()
     db.close()
