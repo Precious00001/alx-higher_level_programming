@@ -14,8 +14,8 @@ rqst.get(url + id, function (error, res, body) {
       if (error) {
         console.log(error);
       }
-      const data_1 = JSON.parse(body1);
-      console.log(data_1.name);
+      const data5 = JSON.parse(body1);
+      console.log(data5.name);
     });
   }
 });
