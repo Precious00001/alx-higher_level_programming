@@ -12,14 +12,14 @@ request(url, function (error, response, body) {
   if (!error) {
     // Parse the film data as JSON and extract the 'characters' array
     const characters = JSON.parse(body).characters;
-    
+
     // Call the 'printCharacters' function to print character names
     printCharacters(characters, 0);
   }
 });
 
 // Define a recursive function to print character names from their URLs
-function printCharacters(characters, index) {
+function printCharacters (characters, index) {
   // Make an HTTP GET request to fetch character data
   request(characters[index], function (error, response, body) {
     // Check if there are no errors in the request
@@ -35,4 +35,3 @@ function printCharacters(characters, index) {
     }
   });
 }
-
